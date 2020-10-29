@@ -1,0 +1,68 @@
+
+	<div id="content-header" class="content-header">
+	{%- assign default_paths = site.pages | map: "path" -%}
+	{%- assign page_paths = site.header_pages | default: default_paths -%}
+	{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+
+		<div class="text-center m-auto">
+			<div class="p-2 p-md-4">
+				<h1 class="armor d-inline-block box-shadow-6 light-beam white-beam p-2 pl-4 pr-4">
+					<!--
+					<span class="top"></span>
+					<span class="bottom"></span>
+					<span class="left"></span>
+					<span class="right"></span>
+					-->
+					<span class="tl_corner"></span>
+					<span class="tr_corner"></span>
+					<span class="bl_corner"></span>
+					<span class="br_corner"></span>
+					MAMEDUL ISLAM
+				</h1>
+			</div>
+			{%- if titles_size > 0 -%}
+			<div class="navbar-panel">			
+				<nav class="navbar navbar-expand-md">
+					<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+						<!--<span class="navbar-toggler-icon text-white"></span>-->
+						<img src="/assets/icons/option_icons_32x32.gif" alt="&#x22EF;" style="height:32px;width:auto;"/>
+					</button>
+					
+					<div class="collapse navbar-collapse max-vh-md-40-only overflow-sm-only-auto" id="navbarCollapse">
+						<ul class="navbar-nav m-auto">
+							<li class="nav-item">
+								<a class="nav-link" href="/">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/portfolios">Portfolio</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/services">My services</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/blog">Blog</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/abouts">Abouts</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/contacts">Contacts</a>
+							</li>
+							<!--
+							{%- for path in page_paths -%}
+							 {%- assign my_page = site.pages | where: "path", path | first -%}
+							 {%- if my_page.title -%}
+								<li class="nav-item">
+									<a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+								</li>
+							 {%- endif -%}
+							{%- endfor -%}
+							-->
+						</ul>
+					</div>
+				</nav>
+			</div>
+			{%- endif -%}
+		</div>
+	</div>
+	
